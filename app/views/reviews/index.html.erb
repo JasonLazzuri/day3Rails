@@ -1,0 +1,16 @@
+<h1>Reviews</h1>
+
+<div class="container">
+  <ul>
+    <%@movie.reviews.each do |review|%>
+      <li><%= review.user %></li>
+      <li><%= review.stars %></li>
+      <li><%= review.analysis %></li>
+  <hr>
+    <%end%>
+  </ul>
+</div>
+
+
+
+  <%= link_to 'New Review', new_movie_review_path(@movie) %>
